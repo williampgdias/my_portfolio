@@ -1,0 +1,305 @@
+:root {
+    --color-primary: #7a7a16;
+    --color-secondary: #3c2915;
+}
+
+body {
+    background: #000;
+}
+
+.text {
+    text-align: center;
+    margin-top: 20px;
+    color: #000;
+}
+
+.title-with-border:before,
+.title-with-border:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.title-with-border:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.title-with-border:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.tab-pane {
+    padding-bottom: 20px;
+}
+
+
+/******************** SIDEBAR ********************/
+
+.sidebar {
+    width: 150px;
+    height: 100%;
+    background: #1d1d12;
+    position: absolute;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.text-center {
+    padding: 20px 0;
+}
+
+.sidebar a,
+.sidebar a.active,
+.sidebar a:hover {
+    text-align: center;
+    background: #1d1d12;
+    border: none;
+}
+
+.sidebar a:not(.active) {
+    color: #fff;
+}
+
+.sidebar a.active {
+    color: var(--color-primary);
+}
+
+.sidebar a .bi {
+    width: 30px;
+    height: 30px;
+}
+
+
+/******************** CONTENT ********************/
+
+.content-site {
+    margin-left: 170px;
+}
+
+.content-intro {
+    padding: 50px;
+    margin-top: 150px;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+}
+
+.content-intro img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.mt-0 {
+    padding-top: 25px;
+    font-size: 3.2rem;
+    color: #000;
+}
+
+.mt-0 span {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.mt-1 {
+    font-size: 1.5rem;
+    padding-left: 220px;
+    color: #000;
+}
+
+
+/******************** CONTENT ********************/
+
+
+/******************** ABOUT ********************/
+
+.about,
+.services {
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    padding: 30px 20px;
+    color: #000;
+}
+
+.about {
+    margin-top: 40px;
+}
+
+.about p {
+    font-weight: 500;
+}
+
+.services {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.about .text-about,
+.services .text-services {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.card.service {
+    background: #000;
+    text-align: center;
+    min-width: 200px;
+    align-items: center;
+}
+
+.service-icon {
+    background: #7a7a16;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    padding-top: 13px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 33%;
+}
+
+.card.service:hover,
+.card:hover .service-icon {
+    border: 2px solid #fff;
+}
+
+.service-icon .bi {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+}
+
+.card-title.service-text,
+.card-text.service-text {
+    color: var(--color-primary);
+}
+
+.card-title.service-text {
+    font-size: 25px;
+}
+
+
+/******************** CONTENT ********************/
+
+
+/******************** PORTFOLIO ********************/
+
+.portfolio {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+}
+
+.portfolio h1 {
+    font-weight: bold;
+}
+
+.card-style {
+    background: #000;
+    border-radius: 20px;
+    margin: 20px 5px 0 5px;
+    text-align: center;
+}
+
+.card-style a:hover {
+    background: #fff;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.card-img-top {
+    border-radius: 20px;
+    margin-top: 10px;
+    height: 9rem;
+}
+
+.card-style .card-title {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border: none;
+}
+
+
+/******************** CONTENT ********************/
+
+
+/******************** CONTACT ********************/
+
+.contact,
+.contact-content {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+}
+
+.contact-content {
+    background-color: #000;
+}
+
+.contact span,
+.contact h6 {
+    color: #fff;
+}
+
+.contact .bi {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+
+/******************** RESPONSIVE ********************/
+
+
+/*
+
+@media (min-width: 280px) and (max-width: 750px) {
+    .sidebar {
+        display: none;
+    }
+    .content-site {
+        margin: 0;
+    }
+    .content-intro {
+        margin: 7rem auto;
+        width: 350px;
+        height: 450px;
+    }
+    .content-intro img {
+        width: 150px;
+        height: 150px;
+    }
+    .media-body {
+        position: absolute;
+        top: 400px;
+    }
+    .mt-0 {
+        padding-top: 0;
+        font-size: 30px;
+    }
+    .mt-1 {
+        font-size: 10px;
+        padding-left: 10px;
+    }
+}
+*/

@@ -1,80 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Dias Portfolio</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    
-    <header class="header">
-            <nav class="nav">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
 
-                <button class="btn-mobile">Menu</button>
-
-                <div class="logo">
-                    <img src="img/pefilLinkedin.png" alt="logo William">
+                <div class="list-group sidebar" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                      </svg>
+                        <br> Home
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-about-list" data-bs-toggle="list" href="#list-about" role="tab" aria-controls="list-about">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+                      </svg>
+                        <br> About Me
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-portfolio-list" data-bs-toggle="list" href="#list-portfolio" role="tab" aria-controls="list-portfolio">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+                        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                        <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                        <br> Portfolio
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-contact-list" data-bs-toggle="list" href="#list-contact" role="tab" aria-controls="list-contact">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                      </svg>
+                        <br> Contact
+                    </a>
                 </div>
+                <div class="tab-content content-site" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                        <div class="row justify-content-md-center">
+                            <div class="jumbotron col-md-10 content-intro">
+                                <div class="media d-flex">
+                                    <img class="align-self-center mr-3" src="img/perfilLinkedin.svg" alt="Linkedin Perfil">
+                                    <div class="media-body">
+                                        <h1 class="mt-0">Hello, <br><span>I am William Dias</span></h1>
+                                        <h3 class="mt-1">Front-End Developer Junior</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-about" role="tabpanel" aria-labelledby="list-about-list">
+                        <div class="row justify-content-md-center">
+                            <div class="jumbotron col-md-10 about">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <h1 class="text-about title-with-border">Who I am</h1>
+                                        <p>
+                                            I am brazilian, 32 years old. I live in Ireland since 2013. I have done many things since I got here and after few frustations, started to work in a busy kitchen as kitchen porter. After few months, became a Chef and since then, I have been working full
+                                            time in a kitchen. My life changed after my daughter born and I decided to change my career. I am a student of front-end developer and am doing this Portfolio to improve my skills and show what I can do, so
+                                            I will change the design and the functions of this website few times, to get more experience and try a different perspective.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="text">
-                    <h1>
-                        front-end <br> Developer
-                    </h1>
+                        <div class="row justify-content-md-center">
+                            <div class="jumbotron col-md-10 services">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <div class="row">
+                                            <h1 class="text-services title-with-border">Services</h1>
+                                        </div>
+                                        <div class="row justify-content-md-center">
+                                            <div class="row col-md-10">
+                                                <div class="col-md-5">
+                                                    <div class="card service">
+                                                        <div class="card-body">
+                                                            <div class="service-icon">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16">
+                                                                    <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                                                                    <path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708z"/>
+                                                                </svg>
+                                                            </div>
+
+                                                            <h5 class="card-title service-text">Front End Developer</h5>
+                                                            <p class="card-text service-text">
+                                                                HTML, CSS and JavaScript
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="card service">
+                                                        <div class="card-body">
+                                                            <div class="service-icon">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16">
+                                                                    <path d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/>
+                                                                </svg>
+                                                            </div>
+
+                                                            <h5 class="card-title service-text">Soon...</h5>
+                                                            <p class="card-text service-text">
+                                                                More services really soon...
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade card-flex" id="list-portfolio" role="tabpanel" aria-labelledby="list-portfolio-list">
+                        <div class="row justify-content-md-center">
+                            <div class="jumbotron portfolio col-md-10">
+                                <div class="text">
+                                    <h1 class="title-with-border">Portfolio</h1>
+                                </div>
+                                <div class="row justify-content-md-center">
+                                    <div class="card card-style" style="width: 18rem;height: 100%;">
+                                        <img src="img/disneyClone.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Disney+ Clone</h5>
+                                            <a href="#" class="btn btn-primary btn-style">Check it out</a>
+                                        </div>
+                                    </div>
+                                    <div class="card card-style" style="width: 18rem;height: 100%;">
+                                        <img src="img/stopwatch.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Stopwatch</h5>
+                                            <a href="#" class="btn btn-primary">Check it out</a>
+                                        </div>
+                                    </div>
+                                    <div class="card card-style" style="width: 18rem;height: 100%;">
+                                        <img src="img/calculator.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Calculator</h5>
+
+                                            <a href="#" class="btn btn-primary">Check it out</a>
+                                        </div>
+                                    </div>
+                                    <div class="card card-style" style="width: 18rem;height: 100%;">
+                                        <img src="img/rgb-game.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">RGB Game</h5>
+
+                                            <a href="#" class="btn btn-primary">Check it out</a>
+                                        </div>
+                                    </div>
+                                    <div class="card card-style" style="width: 18rem;height: 100%;">
+                                        <img src="img/navigation.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Navigation</h5>
+
+                                            <a href="#" class="btn btn-primary">Check it out</a>
+                                        </div>
+                                    </div>
+                                    <div class="card card-style" style="width: 18rem;height: 100%;">
+                                        <img src="img/musicPlayer.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Music Player</h5>
+
+                                            <a href="#" class="btn btn-primary">Check it out</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-contact" role="tabpanel" aria-labelledby="list-contact-list">
+                        <div class="row justify-content-md-center">
+                            <div class="jumbotron contact col-md-10">
+                                <div class="text">
+                                    <h1 class="title-with-border">Contact</h1>
+                                </div>
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-10 row contact-content" style="text-align: center;">
+                                        <div class="col-md-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check" viewBox="0 0 16 16">
+                                                <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
+                                                <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
+                                            </svg>
+                                            <br>
+                                            <span>E-mail</span>
+                                            <h6>smdwilliam89@gmail.com</h6>
+                                        </div>
+                                        <div class="col-md-4 border-between">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                            </svg>
+                                            <br>
+                                            <span>Github</span>
+                                            <h6>https://github.com/williampgdias</h6>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                            </svg>
+                                            <br>
+                                            <span>Mobile</span>
+                                            <h6>(+353) 89 951 6664</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="menu">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About me</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <a href="https://www.linkedin.com/in/william-dias-9014081b6/"><img src="img/linkedin.svg" alt=""></a>
-                    <a href="https://github.com/williampgdias"><img src="img/github.svg" alt=""></a>
-                </div>
-            </nav>    
-
-            <div class="intro">
-                <h1>
-                    <span>Hi, I am</span> <br> William Dias
-                </h1>
             </div>
-    </header>
-
-    <section class="about" id="about">
-        <h1 class="text">Who I am</h1>
-        <p>I am brazilian, 32 years old. I live in Ireland since 2013. I have done many things since I got here and after few frustations, started to work in a busy kitchen as kitchen porter. After few months, became a Chef and since then, I have been working full time in a kitchen. My life changed after my daughter born and I decided to change my career. I am a student of front-end developer and am doing this Portfolio to improve my skills and show what I can do, so I will change the design and the functions of this website few times, to get more experience and try a different perspective.</p>
-    </section>
-
-    <section class="portfolio" id="portfolio">
-        
-        <div class="text">
-            <h1>Portfolio</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatum sapiente quasi reprehenderit facere culpa nesciunt! Suscipit quaerat consequuntur iure, ipsum, illum nam ullam ipsa numquam, voluptatum natus officiis quis.</p>
         </div>
 
-        <div class="box">
-            <div class="box1">
-                <h4>Lorem Ipsum</h4>
-                <p>teste1</p>
-            </div>
-            <div class="box2">
-                <h4>Lorem Ipsum</h4>
-                <p>teste2</p>
-            </div>
-            <div class="box3">
-                <h4>Lorem Ipsum</h4>
-                <p>teste3</p>
-            </div>
-        </div>
+    </div>
 
-    </section>
-   
-    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
