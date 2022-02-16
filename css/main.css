@@ -205,6 +205,11 @@ body {
     font-weight: bold;
 }
 
+.card.card-style {
+    width: 18rem;
+    height: 100%;
+}
+
 .card-style {
     background: #000;
     border-radius: 20px;
@@ -289,9 +294,17 @@ body {
     .mt-1 {
         font-size: 1.26rem;
     }
+    /***** PORTFOLIO *****/
+    .portfolio {
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+    .card-style {
+        margin: 10px auto;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     /***** SIDEBAR *****/
     #list-tab {
         display: none;
@@ -326,5 +339,11 @@ body {
     }
     .card.service {
         margin-top: 10px;
+    }
+    /***** PORTFOLIO *****/
+    .card.card-style {
+        width: 16rem;
+        height: 100%;
+        justify-content: center;
     }
 }
