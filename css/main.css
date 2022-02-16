@@ -217,10 +217,17 @@ body {
     text-align: center;
 }
 
-.card-style a:hover {
-    background: #fff;
-    color: var(--color-primary);
+.btn-primary {
+    background-color: var(--color-primary);
+    border: none;
+}
+
+.card-style a:hover,
+.card-style a:visited {
+    background-color: var(--color-primary);
+    color: #fff;
     font-weight: bold;
+    border: none;
 }
 
 .card-img-top {
@@ -236,11 +243,6 @@ body {
     padding-bottom: 5px;
     margin-bottom: 15px;
     border-bottom: 2px solid var(--color-primary);
-}
-
-.btn-primary {
-    background-color: var(--color-primary);
-    border: none;
 }
 
 
