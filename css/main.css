@@ -75,6 +75,10 @@ body {
     height: 30px;
 }
 
+.navbar {
+    display: none;
+}
+
 
 /******************** CONTENT ********************/
 
@@ -310,6 +314,9 @@ body {
     /***** SIDEBAR *****/
     #list-tab {
         display: none;
+    }
+    .navbar {
+        display: block;
     }
     /***** CONTENT *****/
     .content-site {
