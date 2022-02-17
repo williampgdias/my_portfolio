@@ -349,3 +349,26 @@ body {
         justify-content: center;
     }
 }
+
+@media (min-width: 901px) and (max-width: 950px) {
+    .padding-element {
+        padding: 0 50px;
+    }
+}
+
+@media (min-width: 951px) and (max-width: 1270px) {
+    .padding-element {
+        padding: 0 50px;
+    }
+    /***** HOME *****/
+    .mt-0 {
+        font-size: 2rem;
+    }
+    .mt-0 span {
+        font-size: 3rem;
+    }
+    .mt-1 {
+        padding-left: 0;
+        text-align: center;
+    }
+}
