@@ -173,13 +173,15 @@ body {
 
 .card.service {
     background: #000;
+    border: 2px solid #000;
     text-align: center;
     min-width: 200px;
     align-items: center;
 }
 
 .service-icon {
-    background: #7a7a16;
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary);
     border-radius: 100%;
     width: 80px;
     height: 80px;
@@ -241,16 +243,17 @@ body {
     text-align: center;
 }
 
-.btn-primary {
-    background-color: var(--color-primary);
-    border: none;
-}
-
-.card-style a:hover,
+.btn-primary,
 .card-style a:visited {
     background-color: var(--color-primary);
-    color: #fff;
-    font-weight: bold;
+    border: 2px solid var(--color-primary) !important;
+    color: #000;
+}
+
+.card-style a:hover {
+    background-color: #000;
+    border: 2px solid var(--color-primary) !important;
+    color: var(--color-primary);
     border: none;
 }
 
