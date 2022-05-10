@@ -177,6 +177,12 @@ body {
     text-align: center;
     min-width: 200px;
     align-items: center;
+    margin: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .service-icon {
