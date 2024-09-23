@@ -1,0 +1,30 @@
+.home {
+    /* display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center; */
+    justify-content: center;
+    align-items: center;
+    padding-left: 0%;
+    padding-right: 0%;
+    display: flex;
+}
+
+._3-cols-main-william {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    padding-left: 0%;
+    padding-right: 0%;
+    text-align: left;
+    display: block;
+}
+
+.myPicture {
+    max-width: 600px;
+    z-index: 3;
+}
