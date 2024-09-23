@@ -10,7 +10,9 @@ const Home = () => {
     return (
         <div className="home">
             <div className="_3-cols-main-william">
-                <h1 className="title">Eu sou William Dias</h1>
+                <h1 className="title">
+                    Eu sou <span className="name-color">William Dias</span>
+                </h1>
                 <img
                     className="myPicture"
                     src={myPicture}
