@@ -1,0 +1,28 @@
+.flexContent {
+    display: flex;
+    align-items: center;
+}
+
+.aboutMe .title {
+    margin-top: 50px;
+    position: relative;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.aboutMeText {
+    font-family: 'SUSE', system-ui;
+    font-size: 1.4rem;
+    text-align: justify;
+    padding-right: 150px;
+}
+
+.mySelf {
+    width: 450px;
+}
+
+.elementAbsolute {
+    width: 50%;
+    position: relative;
+    top: -50px;
+}
