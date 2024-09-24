@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 // Import CSS
 import './Header.css';
 
@@ -18,6 +21,13 @@ const Header = () => {
                 <Link to="/sobre-mim">Sobre Mim</Link>
                 <Link to="/portfolio">Portfólio</Link>
                 <Link to="/contato">Contato</Link>
+                <Link to="/idioma" className="language">
+                    Idioma
+                    <FontAwesomeIcon
+                        className="arrowDown"
+                        icon={faChevronDown}
+                    />
+                </Link>
             </nav>
         </header>
     );
