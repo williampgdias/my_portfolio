@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #010519;
-    color: #fff;
+    background-color: #010519 !important;
+    color: #fff !important;
 }
 
 .container {

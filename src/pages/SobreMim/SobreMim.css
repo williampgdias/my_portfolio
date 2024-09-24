@@ -1,6 +1,10 @@
+.aboutMe {
+    height: 30vh;
+}
+
 .flexContent {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .aboutMe .title {
@@ -14,15 +18,35 @@
     font-family: 'SUSE', system-ui;
     font-size: 1.4rem;
     text-align: justify;
-    padding-right: 150px;
+    padding-right: 100px;
 }
 
 .mySelf {
-    width: 450px;
+    max-width: 550px;
 }
 
 .elementAbsolute {
     width: 50%;
     position: relative;
-    top: -50px;
+    top: -150px;
+}
+
+.studyContainer .title {
+    padding-bottom: 50px;
+}
+
+.techText {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.iconsContainer {
+    display: flex;
+    gap: 35px;
+    font-size: 4rem;
+    margin-bottom: 200px;
+}
+
+.icon {
+    color: #717cdc;
 }

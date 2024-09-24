@@ -1,25 +1,55 @@
 import React from 'react';
 
+// Grid
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 // CSS
 import './Home.css';
 
 // images
-import myPicture from '../../assets/me.png';
+import mySelf from '../../assets/mySelf.png';
 
 const Home = () => {
+    const [isHovered, setIsHovered] = React.useState(false);
+
+    const handleMouseEnter = () => setIsHovered(true);
+    const handleMouseLeave = () => setIsHovered(false);
+
     return (
         <div className="home">
-            <div className="_3-cols-main-william">
-                <h1 className="title">
-                    Eu sou <span className="name-color">William Dias</span>
-                </h1>
-                <img
-                    className="myPicture"
-                    src={myPicture}
-                    alt="Picture of William Dias"
-                />
-                <p className="subtitle">Desenvolvedor FrontEnd</p>
-            </div>
+            <Container>
+                <Row>
+                    <Col>
+                        <h1 className="title">
+                            Eu sou{' '}
+                            <span className="name-color">William Dias</span>
+                        </h1>
+                    </Col>
+                    <Col>
+                        <div
+                            className="image-container"
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <img
+                                className="myPicture"
+                                src={mySelf}
+                                alt="Picture of William Dias"
+                            />
+                            <div
+                                className={`circle ${
+                                    isHovered ? 'hovered' : ''
+                                }`}
+                            ></div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <p className="subtitle">Desenvolvedor FrontEnd</p>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };
