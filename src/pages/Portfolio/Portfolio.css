@@ -1,0 +1,15 @@
+.cardsContainer {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.portfolio .title {
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+
+.portfolio p {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}
