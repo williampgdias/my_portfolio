@@ -26,11 +26,22 @@
     color: #fff;
     padding: 8px 15px;
     margin-right: 20px;
+    position: relative;
 }
 
-.nav a:nth-child(4) {
-    border-right: 2px solid #717cdc;
-    padding-right: 40px;
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #717cdc;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
 }
 
 .language {
