@@ -4,13 +4,10 @@
 
 .flexContent {
     display: flex;
-    /* align-items: center; */
 }
 
 .aboutMe .title {
     margin-top: 50px;
-    position: relative;
-    display: block;
     padding-bottom: 10px;
 }
 
@@ -31,6 +28,13 @@
     top: -150px;
 }
 
+.studyContainer .container .col {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    padding: 50px;
+}
+
 .studyContainer .title {
     padding-bottom: 50px;
 }
@@ -40,13 +44,12 @@
     font-weight: bold;
 }
 
-.iconsContainer {
-    display: flex;
-    gap: 35px;
-    font-size: 4rem;
-    margin-bottom: 200px;
-}
-
 .icon {
     color: #717cdc;
+    font-size: 6rem;
+}
+
+.techText {
+    text-align: center;
+    padding-top: 10px;
 }

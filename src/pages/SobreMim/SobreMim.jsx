@@ -11,10 +11,10 @@ import {
     faHtml5,
     faCss3,
     faJs,
+    faGitAlt,
 } from '@fortawesome/free-brands-svg-icons';
 
 // Import Bootstrap
-import ProgressBarWithLabel from '../../components/Bootstrap/ProgressBar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -56,37 +56,81 @@ const SobreMim = () => {
             </div>
 
             <div className="studyContainer">
-                <h2 className="title">O que estudo</h2>
+                <h2 className="title">Habilidades</h2>
                 <Container>
                     <Row>
-                        <Col md={6}>
-                            <p className="techText">
-                                Tecnologias que já trabalho:
-                            </p>
+                        {/* Col 01 */}
+                        <Col>
+                            {/* HTML */}
                             <div className="iconsContainer">
                                 <FontAwesomeIcon
                                     className="icon"
                                     icon={faHtml5}
                                 />
+                                <p className="techText">HTML5</p>
+                            </div>
+                        </Col>
+                        {/* Col 02 */}
+                        <Col>
+                            <div className="iconsContainer">
+                                {/* CSS */}
                                 <FontAwesomeIcon
                                     className="icon"
                                     icon={faCss3}
                                 />
-                                <FontAwesomeIcon className="icon" icon={faJs} />
+                                <p className="techText">CSS3</p>
                             </div>
                         </Col>
-                        <Col md={6}>
-                            <p className="techText">
-                                Tecnologias que estudo atualmente:
-                            </p>
+                        {/* Col 03 */}
+
+                        <Col>
+                            <div className="iconsContainer">
+                                {/* JavaScript */}
+                                <FontAwesomeIcon className="icon" icon={faJs} />
+                                <p className="techText">JavaScript</p>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            {/* React */}
                             <div className="iconsContainer">
                                 <FontAwesomeIcon
                                     className="icon"
                                     icon={faReact}
                                 />
+                                <p className="techText">React.js</p>
                             </div>
                         </Col>
+                        <Col>
+                            <div className="iconsContainer">
+                                {/* Git */}
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={faGitAlt}
+                                />
+                                <p className="techText">Git</p>
+                            </div>
+                        </Col>
+                        <Col></Col>
                     </Row>
+                    {/* <Row>
+                        <Col md={6}>
+                            <p className="techText">
+                                Tecnologias que já trabalho:
+                            </p>
+                            
+                        </Col>
+                        <Col md={6}>
+                            <p className="techText">
+                                Tecnologias que estudo atualmente:
+                            </p>
+                            <div className="iconsContainer"></div>
+                        </Col>
+                        <Col>
+                            
+                        </Col>
+                    </Row> */}
                 </Container>
             </div>
         </>
