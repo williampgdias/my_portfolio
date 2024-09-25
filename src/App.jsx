@@ -1,36 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppContent from './components/AppContent';
 
-// Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-// Import CSS
-import './App.css';
-
-// Import Components
-import Header from './components/Header/Header';
-import SobreMim from './pages/SobreMim/SobreMim';
-import Portfolio from './pages/Portfolio/Portfolio';
-import Contato from './pages/Contato/Contato';
-import Home from './pages/Home/Home';
-import Footer from './components/Footer/Footer';
-
-function App() {
+const App = () => {
     return (
-        <>
-            <div className="container">
-                <Router>
-                    <Header />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/sobre-mim" element={<SobreMim />} />
-                        <Route path="/portfolio" element={<Portfolio />} />
-                        <Route path="/contato" element={<Contato />} />
-                    </Routes>
-                </Router>
-            </div>
-            <Footer />
-        </>
+        <Router>
+            <AppContent />
+        </Router>
     );
-}
+};
 
 export default App;
