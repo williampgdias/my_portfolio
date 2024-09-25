@@ -1,6 +1,8 @@
 // Import the required modules.
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const CardContainer = ({
     image,
@@ -16,7 +18,9 @@ const CardContainer = ({
                     bg={variant.toLowerCase()}
                     key={variant}
                     text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                    style={{ width: '18rem' }}
+                    style={{
+                        width: '25rem',
+                    }}
                 >
                     <Card.Img variant="top" src={image} />
                     <Card.Body>

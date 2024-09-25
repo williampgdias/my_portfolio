@@ -14,6 +14,8 @@ import {
     faGitAlt,
 } from '@fortawesome/free-brands-svg-icons';
 
+import { faPersonDigging, faWrench } from '@fortawesome/free-solid-svg-icons';
+
 // Import Bootstrap
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -112,25 +114,17 @@ const SobreMim = () => {
                                 <p className="techText">Git</p>
                             </div>
                         </Col>
-                        <Col></Col>
-                    </Row>
-                    {/* <Row>
-                        <Col md={6}>
-                            <p className="techText">
-                                Tecnologias que já trabalho:
-                            </p>
-                            
-                        </Col>
-                        <Col md={6}>
-                            <p className="techText">
-                                Tecnologias que estudo atualmente:
-                            </p>
-                            <div className="iconsContainer"></div>
-                        </Col>
                         <Col>
-                            
+                            <div className="iconsContainer">
+                                {/* Git */}
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={faWrench}
+                                />
+                                <p className="techText">Under Construction</p>
+                            </div>
                         </Col>
-                    </Row> */}
+                    </Row>
                 </Container>
             </div>
         </>

@@ -32,7 +32,16 @@
     justify-content: center;
     text-align: center;
     display: flex;
+    flex-direction: column;
     padding: 50px;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.4s ease;
+}
+
+.studyContainer .container .col:hover .icon,
+.studyContainer .container .col:hover .techText {
+    color: #717cdc;
 }
 
 .studyContainer .title {
@@ -45,11 +54,12 @@
 }
 
 .icon {
-    color: #717cdc;
     font-size: 6rem;
+    transition: color 0.4s ease;
 }
 
 .techText {
     text-align: center;
     padding-top: 10px;
+    transition: color 0.4s ease;
 }
