@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Form from '../../components/Bootstrap/Form/Form';
+
 const Contato = () => {
     return (
         <div>
-            <h1>Contato</h1>
+            <Form />
         </div>
     );
 };

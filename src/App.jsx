@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import AppContent from './components/AppContent';
+import AppContent from './components/AppContent/AppContent';
 
 const App = () => {
     return (

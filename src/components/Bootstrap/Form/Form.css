@@ -1,0 +1,9 @@
+.contact {
+    height: calc(
+        100vh - 100px - 64px
+    ); /* 100px is the height of the navbar and 64px is the height of the footer */
+}
+
+.form {
+    border: 1px solid red;
+}
