@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
 
 import emailjs from 'emailjs-com';
+
+import './Form.css';
 
 function ContactForm() {
     const [formData, setFormData] = useState({
         first_name: '',
         last_name: '',
         email: '',
+        number: '',
         message: '',
     });
 
@@ -43,79 +48,116 @@ function ContactForm() {
     };
 
     return (
-        <Form onSubmit={handleSubmit}>
-            <Form.Group as={Row} className="mb-3" controlId="formFirstName">
-                <Form.Label column sm={2}>
-                    Primeiro nome
-                </Form.Label>
-                <Col sm={10}>
-                    <Form.Control
-                        type="text"
-                        name="first_name"
-                        placeholder="ex: Lauro"
-                        value={formData.first_name}
-                        onChange={handleChange}
-                        required
-                    />
-                </Col>
-            </Form.Group>
+        <>
+            <h1 className="title">Contato</h1>
+            <div className="contact">
+                <Form onSubmit={handleSubmit}>
+                    <Container>
+                        <Row>
+                            <Col>
+                                {/* FirstName */}
+                                <FloatingLabel
+                                    controlId="floatingFirstName"
+                                    label="Primeiro Nome"
+                                    className="mb-3"
+                                >
+                                    <Form.Control
+                                        type="text"
+                                        name="first_name"
+                                        placeholder="ex.: João"
+                                        value={formData.first_name}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                </FloatingLabel>
+                            </Col>
+                            <Col>
+                                {/* LastName */}
+                                <FloatingLabel
+                                    controlId="floatingLastName"
+                                    label="Último Nome"
+                                    className="mb-3"
+                                >
+                                    <Form.Control
+                                        type="text"
+                                        name="last_name"
+                                        placeholder="ex.: da Silva"
+                                        value={formData.last_name}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                </FloatingLabel>
+                            </Col>
+                            <Row>
+                                {/* Email */}
+                                <Col>
+                                    <FloatingLabel
+                                        controlId="floatingEmail"
+                                        label="Email address"
+                                        className="mb-3"
+                                    >
+                                        <Form.Control
+                                            type="email"
+                                            name="email"
+                                            placeholder="name@example.com"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                    </FloatingLabel>
+                                </Col>
 
-            <Form.Group as={Row} className="mb-3" controlId="formLastName">
-                <Form.Label column sm={2}>
-                    Último nome
-                </Form.Label>
-                <Col sm={10}>
-                    <Form.Control
-                        type="text"
-                        name="last_name"
-                        placeholder="ex: Martins"
-                        value={formData.last_name}
-                        onChange={handleChange}
-                        required
-                    />
-                </Col>
-            </Form.Group>
-            <Form.Group as={Row} className="mb-3" controlId="formEmail">
-                <Form.Label column sm={2}>
-                    E-mail
-                </Form.Label>
-                <Col sm={10}>
-                    <Form.Control
-                        type="email"
-                        name="email"
-                        placeholder="Digite um e-mail válido"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                </Col>
-            </Form.Group>
+                                {/* Whatsapp */}
+                                <Col>
+                                    <FloatingLabel
+                                        controlId="floatingNumber"
+                                        label="Whatsapp"
+                                        className="mb-3"
+                                    >
+                                        <Form.Control
+                                            type="number"
+                                            name="number"
+                                            placeholder="(21)99999-9999"
+                                            value={formData.number}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                    </FloatingLabel>
+                                </Col>
+                            </Row>
 
-            {/* TextArea */}
-            <Form.Group as={Row} className="mb-3" controlId="formMessage">
-                <Form.Label column sm={2}>
-                    Mensagem
-                </Form.Label>
-                <Col sm={10}>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        type="text"
-                        name="message"
-                        placeholder="Digite sua mensagem"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                    />
-                </Col>
-            </Form.Group>
+                            {/* TextArea */}
+                            <Row>
+                                <Col>
+                                    <FloatingLabel
+                                        controlId="floatingTextArea"
+                                        label="TextArea"
+                                        className="mb-3"
+                                    >
+                                        <Form.Control
+                                            as="textarea"
+                                            rows={30}
+                                            type="text"
+                                            name="message"
+                                            placeholder="Digite sua mensagem"
+                                            value={formData.message}
+                                            onChange={handleChange}
+                                            style={{ height: '100px' }}
+                                            required
+                                        />
+                                    </FloatingLabel>
+                                </Col>
+                            </Row>
 
-            <Form.Group as={Row} className="mb-3">
-                <Col sm={{ span: 10, offset: 2 }}>
-                    <Button type="submit">Enviar e-mail</Button>
-                </Col>
-            </Form.Group>
-        </Form>
+                            {/* Send Button */}
+                            <Form.Group className="mb-3">
+                                <Button type="submit">Enviar e-mail</Button>
+                            </Form.Group>
+                        </Row>
+                    </Container>
+                </Form>
+            </div>
+        </>
     );
 }
 

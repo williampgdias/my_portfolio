@@ -2,8 +2,41 @@
     height: calc(
         100vh - 100px - 64px
     ); /* 100px is the height of the navbar and 64px is the height of the footer */
+    /* display: flex; */
+    /* border: 1px solid red; */
 }
 
-.form {
-    border: 1px solid red;
+.form-control::placeholder {
+    /* color: #000 !important; */
+}
+
+.form-control {
+    border: 1px solid #717cdc;
+    background-color: transparent;
+    color: #fff !important;
+}
+
+.form-control:focus {
+    border: 1px solid #717cdc;
+    background-color: transparent;
+}
+
+.form-control label {
+    background-color: transparent !important;
+    border: 1px solid red !important;
+}
+
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    color: #717cdc;
+    font-size: 0.9rem;
+}
+
+.form-floating > .form-control-plaintext ~ label::after,
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select ~ label::after {
+    background-color: transparent;
 }
