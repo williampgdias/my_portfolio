@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+import { IMaskInput } from 'react-imask';
 
 import emailjs from 'emailjs-com';
 
@@ -88,72 +89,78 @@ function ContactForm() {
                                     />
                                 </FloatingLabel>
                             </Col>
-                            <Row>
-                                {/* Email */}
-                                <Col>
-                                    <FloatingLabel
-                                        controlId="floatingEmail"
-                                        label="Email address"
-                                        className="mb-3"
-                                    >
-                                        <Form.Control
-                                            type="email"
-                                            name="email"
-                                            placeholder="name@example.com"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </FloatingLabel>
-                                </Col>
-
-                                {/* Whatsapp */}
-                                <Col>
-                                    <FloatingLabel
-                                        controlId="floatingNumber"
-                                        label="Whatsapp"
-                                        className="mb-3"
-                                    >
-                                        <Form.Control
-                                            type="number"
-                                            name="number"
-                                            placeholder="(21)99999-9999"
-                                            value={formData.number}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </FloatingLabel>
-                                </Col>
-                            </Row>
-
-                            {/* TextArea */}
-                            <Row>
-                                <Col>
-                                    <FloatingLabel
-                                        controlId="floatingTextArea"
-                                        label="TextArea"
-                                        className="mb-3"
-                                    >
-                                        <Form.Control
-                                            as="textarea"
-                                            rows={30}
-                                            type="text"
-                                            name="message"
-                                            placeholder="Digite sua mensagem"
-                                            value={formData.message}
-                                            onChange={handleChange}
-                                            style={{ height: '100px' }}
-                                            required
-                                        />
-                                    </FloatingLabel>
-                                </Col>
-                            </Row>
-
-                            {/* Send Button */}
-                            <Form.Group className="mb-3">
-                                <Button type="submit">Enviar e-mail</Button>
-                            </Form.Group>
                         </Row>
+                        <Row>
+                            {/* Email */}
+                            <Col>
+                                <FloatingLabel
+                                    controlId="floatingEmail"
+                                    label="Email address"
+                                    className="mb-3"
+                                >
+                                    <Form.Control
+                                        type="email"
+                                        name="email"
+                                        placeholder="name@example.com"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                </FloatingLabel>
+                            </Col>
+
+                            {/* Whatsapp */}
+                            <Col>
+                                <FloatingLabel
+                                    controlId="floatingNumber"
+                                    label="Whatsapp"
+                                    className="mb-3"
+                                >
+                                    <IMaskInput
+                                        mask="(00)00000-0000"
+                                        value={formData.number}
+                                        onAccept={(value) =>
+                                            setFormData({
+                                                ...formData,
+                                                number: value,
+                                            })
+                                        }
+                                        name="number"
+                                        placeholder="(21)99999-9999"
+                                        className="form-control"
+                                        required
+                                    />
+                                </FloatingLabel>
+                            </Col>
+                        </Row>
+
+                        {/* TextArea */}
+                        <Row>
+                            <Col>
+                                <FloatingLabel
+                                    controlId="floatingTextArea"
+                                    label="Digite sua mensagem"
+                                    className="mb-3"
+                                >
+                                    <Form.Control
+                                        as="textarea"
+                                        rows={30}
+                                        type="text"
+                                        name="message"
+                                        placeholder="Digite sua mensagem"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        style={{ height: '100px' }}
+                                        required
+                                    />
+                                </FloatingLabel>
+                            </Col>
+                        </Row>
+
+                        {/* Send Button */}
+                        <Form.Group className="mb-3">
+                            <Button type="submit">Enviar e-mail</Button>
+                        </Form.Group>
                     </Container>
                 </Form>
             </div>

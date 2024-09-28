@@ -2,8 +2,13 @@
     height: calc(
         100vh - 100px - 64px
     ); /* 100px is the height of the navbar and 64px is the height of the footer */
-    /* display: flex; */
-    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
 }
 
 .form-control::placeholder {
@@ -16,7 +21,8 @@
     color: #fff !important;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-control:active {
     border: 1px solid #717cdc;
     background-color: transparent;
 }
