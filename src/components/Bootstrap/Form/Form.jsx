@@ -50,7 +50,11 @@ function ContactForm() {
 
     return (
         <>
-            <h1 className="title">Contato</h1>
+            <>
+                <h1 className="title" style={{ marginTop: '50px' }}>
+                    Contato
+                </h1>
+            </>
             <div className="contact">
                 <Form onSubmit={handleSubmit}>
                     <Container>
@@ -144,7 +148,6 @@ function ContactForm() {
                                 >
                                     <Form.Control
                                         as="textarea"
-                                        rows={30}
                                         type="text"
                                         name="message"
                                         placeholder="Digite sua mensagem"

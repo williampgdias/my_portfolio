@@ -1,18 +1,13 @@
 .contact {
     height: calc(
-        100vh - 100px - 64px
+        100vh - 100px - 64px - 135px
     ); /* 100px is the height of the navbar and 64px is the height of the footer */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 form {
-    width: 100%;
-}
-
-.form-control::placeholder {
-    /* color: #000 !important; */
+    padding-top: 100px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .form-control {
