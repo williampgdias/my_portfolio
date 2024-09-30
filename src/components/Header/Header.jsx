@@ -24,12 +24,13 @@ const Header = () => {
         <>
             <Navbar collapseOnSelect expand="lg" className="header">
                 <Container>
-                    <Navbar.Brand href="/">
+                    <Navbar.Brand>
                         <img className="logo" src={img} alt="Logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto nav justify-content-end">
+                            <Link to="/home">Home</Link>
                             <Link to="/sobre-mim">Sobre Mim</Link>
                             <Link to="/portfolio">Portfólio</Link>
                             <Link to="/contato">Contato</Link>
@@ -45,46 +46,6 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            {/* <Navbar className="header">
-                <Container>
-                    <Navbar.Brand href="/">
-                        <img className="logo" src={img} alt="Logo" />
-                    </Navbar.Brand>
-                    <Navbar.Collapse>
-                        <Nav className="me-auto nav justify-content-end">
-                            <Link to="/sobre-mim">Sobre Mim</Link>
-                            <Link to="/portfolio">Portfólio</Link>
-                            <Link to="/contato">Contato</Link>
-                            <Link to="/idioma" className="language">
-                                Idioma
-                                <FontAwesomeIcon
-                                    className="arrowDown"
-                                    icon={faChevronDown}
-                                />
-                            </Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar> */}
-            {/* Old Header */}
-            {/* <header className="header">
-                <div>
-                    <img className="logo" src={img} alt="Logo" />
-                </div>
-                <nav className="nav">
-                    <Link to="/">Home</Link>
-                    <Link to="/sobre-mim">Sobre Mim</Link>
-                    <Link to="/portfolio">Portfólio</Link>
-                    <Link to="/contato">Contato</Link>
-                    <Link to="/idioma" className="language">
-                        Idioma
-                        <FontAwesomeIcon
-                            className="arrowDown"
-                            icon={faChevronDown}
-                        />
-                    </Link>
-                </nav>
-            </header> */}
         </>
     );
 };
