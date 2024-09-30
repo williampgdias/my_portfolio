@@ -27,7 +27,7 @@ function AppContent() {
             <div className="container">
                 <Header />
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
                     <Route path="/sobre-mim" element={<SobreMim />} />
                     <Route path="/portfolio" element={<Portfolio />} />
                     <Route path="/contato" element={<Contato />} />
