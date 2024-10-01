@@ -1,21 +1,5 @@
 import React from 'react';
 
-// Import Images
-import myPicture from '../../assets/me.png';
-import elementAbsolute from '../../assets/element2.png';
-
-// FontAwesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faReact,
-    faHtml5,
-    faCss3,
-    faJs,
-    faGitAlt,
-} from '@fortawesome/free-brands-svg-icons';
-
-import { faPersonDigging, faWrench } from '@fortawesome/free-solid-svg-icons';
-
 // Import Bootstrap
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -23,6 +7,22 @@ import Col from 'react-bootstrap/Col';
 
 // Import CSS
 import './SobreMim.css';
+
+// Import Images
+import myPicture from '../../assets/me.png';
+import elementAbsolute from '../../assets/element2.png';
+
+// Import FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faReact,
+    faHtml5,
+    faCss3,
+    faJs,
+    faGitAlt,
+    faBootstrap,
+} from '@fortawesome/free-brands-svg-icons';
+import { faWrench } from '@fortawesome/free-solid-svg-icons';
 
 const SobreMim = () => {
     return (
@@ -59,73 +59,46 @@ const SobreMim = () => {
 
             <div className="studyContainer">
                 <h2 className="title">Habilidades</h2>
-                <Container>
-                    <Row>
-                        {/* Col 01 */}
-                        <Col>
-                            {/* HTML */}
-                            <div className="iconsContainer">
-                                <FontAwesomeIcon
-                                    className="icon"
-                                    icon={faHtml5}
-                                />
-                                <p className="techText">HTML5</p>
-                            </div>
-                        </Col>
-                        {/* Col 02 */}
-                        <Col>
-                            <div className="iconsContainer">
-                                {/* CSS */}
-                                <FontAwesomeIcon
-                                    className="icon"
-                                    icon={faCss3}
-                                />
-                                <p className="techText">CSS3</p>
-                            </div>
-                        </Col>
-                        {/* Col 03 */}
 
-                        <Col>
-                            <div className="iconsContainer">
-                                {/* JavaScript */}
-                                <FontAwesomeIcon className="icon" icon={faJs} />
-                                <p className="techText">JavaScript</p>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            {/* React */}
-                            <div className="iconsContainer">
-                                <FontAwesomeIcon
-                                    className="icon"
-                                    icon={faReact}
-                                />
-                                <p className="techText">React.js</p>
-                            </div>
-                        </Col>
-                        <Col>
-                            <div className="iconsContainer">
-                                {/* Git */}
-                                <FontAwesomeIcon
-                                    className="icon"
-                                    icon={faGitAlt}
-                                />
-                                <p className="techText">Git</p>
-                            </div>
-                        </Col>
-                        <Col>
-                            <div className="iconsContainer">
-                                {/* Git */}
-                                <FontAwesomeIcon
-                                    className="icon"
-                                    icon={faWrench}
-                                />
-                                <p className="techText">Under Construction</p>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
+                {/* Início do container das habilidades */}
+                <div className="techContainer">
+                    {/* HTML */}
+                    <div className="iconsContainer">
+                        <FontAwesomeIcon className="icon" icon={faHtml5} />
+                        <p className="techText">HTML5</p>
+                    </div>
+
+                    {/* CSS */}
+                    <div className="iconsContainer">
+                        <FontAwesomeIcon className="icon" icon={faCss3} />
+                        <p className="techText">CSS3</p>
+                    </div>
+
+                    {/* JavaScript */}
+                    <div className="iconsContainer">
+                        <FontAwesomeIcon className="icon" icon={faJs} />
+                        <p className="techText">JavaScript</p>
+                    </div>
+
+                    {/* React */}
+                    <div className="iconsContainer">
+                        <FontAwesomeIcon className="icon" icon={faReact} />
+                        <p className="techText">React.js</p>
+                    </div>
+
+                    {/* Git */}
+                    <div className="iconsContainer">
+                        <FontAwesomeIcon className="icon" icon={faGitAlt} />
+                        <p className="techText">Git</p>
+                    </div>
+
+                    {/* Bootstrap */}
+                    <div className="iconsContainer">
+                        <FontAwesomeIcon className="icon" icon={faBootstrap} />
+                        <p className="techText">Bootstrap</p>
+                    </div>
+                </div>
+                {/* Fim do container das habilidades */}
             </div>
         </>
     );

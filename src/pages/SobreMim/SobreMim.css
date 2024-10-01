@@ -1,25 +1,22 @@
-.aboutMe {
-    height: 90vh;
-}
-
 .flexContent {
     display: flex;
 }
 
 .aboutMe .title {
-    margin-top: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
 }
 
 .aboutMeText {
     font-family: 'SUSE', system-ui;
     font-size: 1.4rem;
     text-align: justify;
-    padding-right: 100px;
+    padding-right: 80px;
+    padding-top: 40px;
 }
 
 .mySelf {
-    max-width: 550px;
+    max-width: 500px;
+    max-height: 650px;
 }
 
 .elementAbsolute {
@@ -28,24 +25,23 @@
     top: -150px;
 }
 
-.studyContainer .container .col {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
+.iconsContainer {
     cursor: pointer;
-    color: #fff;
-    transition: color 0.4s ease;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    padding: 10px;
+    transition: border 0.4s ease;
+    width: 300px;
 }
 
-.studyContainer .container .col:hover .icon,
-.studyContainer .container .col:hover .techText {
+.iconsContainer:hover {
+    border: 1px solid #717cdc;
+}
+
+.iconsContainer:hover .icon,
+.iconsContainer:hover .techText {
     color: #717cdc;
-}
-
-.studyContainer .title {
-    padding-bottom: 50px;
 }
 
 .techText {
@@ -59,7 +55,67 @@
 }
 
 .techText {
-    text-align: center;
-    padding-top: 10px;
+    margin-bottom: 0;
     transition: color 0.4s ease;
+}
+
+.techContainer {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+/* Responsive */
+@media (max-width: 1215px) {
+    .mySelf {
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .elementAbsolute {
+        width: 50%;
+        position: relative;
+        top: 0;
+    }
+    .techContainer {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    .flexContent {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .aboutMeText {
+        padding-right: 0;
+    }
+    .mySelf {
+        max-width: 600px;
+        max-height: 750px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .elementAbsolute {
+        width: 100%;
+    }
+}
+
+@media (max-width: 643px) {
+    .mySelf {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .iconsContainer {
+        width: 80%;
+    }
+}
+
+@media (max-width: 575px) {
+    .aboutMeText {
+        font-size: 1.2rem;
+    }
 }

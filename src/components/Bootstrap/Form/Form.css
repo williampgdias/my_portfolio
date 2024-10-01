@@ -1,11 +1,12 @@
 .contact {
-    height: calc(100vh - 325px);
+    height: calc(100vh - 365px);
 }
 
 form {
     padding-top: 100px;
     max-width: 1000px;
     margin: 0 auto;
+    font-family: 'SUSE', system-ui;
 }
 
 .form-control {
