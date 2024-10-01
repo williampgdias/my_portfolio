@@ -1,17 +1,10 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    margin-top: 20px;
-}
-
 .logo {
     width: 80px;
 }
 
-.nav ul {
+.nav div {
     display: flex;
+    align-items: center;
 }
 
 .nav {
@@ -44,20 +37,12 @@
     width: 100%;
 }
 
-.arrowDown {
-    margin-left: 5px;
-}
-
-.active {
-    border-bottom: #fff 2px solid;
-}
-
 .logoLanguage {
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
 
-.navbar-nav {
-    align-items: center;
+.navbar-toggler {
+    background-color: #fff;
 }
