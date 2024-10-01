@@ -19,7 +19,7 @@ import Contato from '../../pages/Contato/Contato';
 import Home from '../../pages/Home/Home';
 import Footer from '../Footer/Footer';
 
-function AppContent() {
+const AppContent = () => {
     const location = useLocation();
 
     return (
@@ -36,6 +36,6 @@ function AppContent() {
             {location.pathname !== '/' && <Footer />}
         </>
     );
-}
+};
 
 export default AppContent;
