@@ -1,8 +1,5 @@
 .home {
-    display: flex;
-    height: 85vh;
-    align-items: center;
-    justify-content: center;
+    padding-top: 50px;
 }
 
 .subtitle {
@@ -14,7 +11,8 @@
 }
 
 .myPicture {
-    max-width: 550px;
+    max-width: 350px;
+
     z-index: 2;
     position: relative;
     pointer-events: none;

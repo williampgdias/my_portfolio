@@ -21,13 +21,13 @@ const Home = () => {
         <div className="home">
             <Container>
                 <Row>
-                    <Col>
+                    <Col xs={12} md={4}>
                         <h1 className="title">
                             Eu sou{' '}
                             <span className="name-color">William Dias</span>
                         </h1>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={4}>
                         <div
                             className="image-container"
                             onMouseEnter={handleMouseEnter}
@@ -45,7 +45,7 @@ const Home = () => {
                             ></div>
                         </div>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={4}>
                         <p className="subtitle">Desenvolvedor FrontEnd</p>
                     </Col>
                 </Row>
