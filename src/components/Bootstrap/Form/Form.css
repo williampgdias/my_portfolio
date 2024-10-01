@@ -1,7 +1,5 @@
 .contact {
-    height: calc(
-        100vh - 100px - 64px - 135px
-    ); /* 100px is the height of the navbar and 64px is the height of the footer */
+    height: calc(100vh - 325px);
 }
 
 form {
@@ -40,4 +38,16 @@ form {
 .form-floating > .form-control:not(:placeholder-shown) ~ label::after,
 .form-floating > .form-select ~ label::after {
     background-color: transparent;
+}
+
+/* RESPONSIVE */
+@media (max-width: 575px) {
+    .contact {
+        height: 100%;
+    }
+
+    form {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }

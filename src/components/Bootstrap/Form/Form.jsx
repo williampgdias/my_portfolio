@@ -59,7 +59,7 @@ function ContactForm() {
                 <Form onSubmit={handleSubmit}>
                     <Container>
                         <Row>
-                            <Col>
+                            <Col xs={12} sm={6}>
                                 {/* FirstName */}
                                 <FloatingLabel
                                     controlId="floatingFirstName"
@@ -76,7 +76,7 @@ function ContactForm() {
                                     />
                                 </FloatingLabel>
                             </Col>
-                            <Col>
+                            <Col xs={12} sm={6}>
                                 {/* LastName */}
                                 <FloatingLabel
                                     controlId="floatingLastName"
@@ -96,7 +96,7 @@ function ContactForm() {
                         </Row>
                         <Row>
                             {/* Email */}
-                            <Col>
+                            <Col xs={12} sm={6}>
                                 <FloatingLabel
                                     controlId="floatingEmail"
                                     label="Email address"
@@ -114,7 +114,7 @@ function ContactForm() {
                             </Col>
 
                             {/* Whatsapp */}
-                            <Col>
+                            <Col xs={12} sm={6}>
                                 <FloatingLabel
                                     controlId="floatingNumber"
                                     label="Whatsapp"

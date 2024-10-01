@@ -7,3 +7,9 @@
 .title {
     font-size: 4rem;
 }
+
+@media (max-width: 575px) {
+    .title {
+        text-align: center;
+    }
+}
