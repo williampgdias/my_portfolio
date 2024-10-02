@@ -12,6 +12,7 @@ import taskManagerImage from '../../assets/portfolioImg/taskManager.png';
 import turkutsImage from '../../assets/portfolioImg/turkutsBarberShop.png';
 import secapsImage from '../../assets/portfolioImg/secapsImage.png';
 import tipCalculatorImage from '../../assets/portfolioImg/tipCalculator.png';
+import bikcraftImage from '../../assets/portfolioImg/bikCraft.png';
 
 const Portfolio = () => {
     return (
@@ -21,6 +22,7 @@ const Portfolio = () => {
                 <p>Aqui você encontra mais sobre meus projetos.</p>
 
                 <div className="cardsContainer">
+                    {/* Hangman */}
                     <CardContainer
                         image={jogoDaForcaImage}
                         title={'Jogo da Forca'}
@@ -30,10 +32,12 @@ const Portfolio = () => {
                         githubLink={
                             'https://github.com/williampgdias/hangman-game'
                         }
-                        depoloyedLink={
+                        deployedLink={
                             'https://williampgdias.github.io/hangman-game/'
                         }
                     />
+
+                    {/* Task Manager */}
                     <CardContainer
                         image={taskManagerImage}
                         title={'Gerenciador de Tarefas'}
@@ -43,10 +47,12 @@ const Portfolio = () => {
                         githubLink={
                             'https://github.com/williampgdias/task_manager'
                         }
-                        depoloyedLink={
+                        deployedLink={
                             'https://williampgdias.github.io/task_manager/'
                         }
                     />
+
+                    {/* Turkuts Barber Shop */}
                     <CardContainer
                         image={turkutsImage}
                         title={'Turkuts Barber Shop'}
@@ -56,10 +62,12 @@ const Portfolio = () => {
                         githubLink={
                             'https://github.com/williampgdias/turkuts_barber_shop'
                         }
-                        depoloyedLink={
+                        deployedLink={
                             'https://williampgdias.github.io/turkuts_barber_shop/'
                         }
                     />
+
+                    {/* Secaps */}
                     <CardContainer
                         image={secapsImage}
                         title={'Secaps Black'}
@@ -69,10 +77,12 @@ const Portfolio = () => {
                         githubLink={
                             'https://github.com/williampgdias/secaps_black'
                         }
-                        depoloyedLink={
+                        deployedLink={
                             'https://williampgdias.github.io/secaps_black/'
                         }
                     />
+
+                    {/* Tip Calculator */}
                     <CardContainer
                         image={tipCalculatorImage}
                         title={'Calculador de Gorjeta'}
@@ -82,8 +92,21 @@ const Portfolio = () => {
                         githubLink={
                             'https://github.com/williampgdias/tip-calculator'
                         }
-                        depoloyedLink={
+                        deployedLink={
                             'https://williampgdias.github.io/tip-calculator/'
+                        }
+                    />
+
+                    {/* Bikcraft */}
+                    <CardContainer
+                        image={bikcraftImage}
+                        title={'Bikcraft'}
+                        cardInfo={
+                            'Site para uma empresa de bicicletas customizadas fictícias, desenvolvido com HTML e CSS. Focado em layout responsivo e boas práticas de design.'
+                        }
+                        githubLink={'https://github.com/williampgdias/bikcraft'}
+                        deployedLink={
+                            'https://williampgdias.github.io/bikcraft/'
                         }
                     />
                 </div>

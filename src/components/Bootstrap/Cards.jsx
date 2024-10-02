@@ -1,52 +1,44 @@
-// Import the required modules.
+import React, { useState } from 'react';
+
+// Import Bootstrap.
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+
+// Import components
+import MyModal from './MyModal';
 
 const CardContainer = ({
     image,
     title,
     cardInfo,
     githubLink,
-    depoloyedLink,
+    deployedLink,
 }) => {
+    const [modalShow, setModalShow] = useState(false);
+
     return (
         <>
-            {['Dark'].map((variant) => (
-                <Card
-                    bg={variant.toLowerCase()}
-                    key={variant}
-                    text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                    style={{
-                        width: '25rem',
-                    }}
-                >
-                    <Card.Img variant="top" src={image} />
-                    <Card.Body>
-                        <Card.Title>{title}</Card.Title>
-                        <Card.Text>{cardInfo}</Card.Text>
-                    </Card.Body>
-                    <Card.Body>
-                        <Button
-                            variant="light"
-                            style={{ marginRight: '10px' }}
-                            href={githubLink}
-                            target="_blank"
-                        >
-                            GitHub
-                        </Button>
+            <Card>
+                <Card.Img variant="top" src={image} />
+                <Card.Body>
+                    <Card.Title>{title}</Card.Title>
+                    <Button
+                        variant="primary"
+                        onClick={() => setModalShow(true)}
+                    >
+                        saiba mais
+                    </Button>
+                </Card.Body>
+            </Card>
 
-                        <Button
-                            variant="info"
-                            href={depoloyedLink}
-                            target="_blank"
-                        >
-                            Deployed
-                        </Button>
-                    </Card.Body>
-                </Card>
-            ))}
+            <MyModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                title={title}
+                cardInfo={cardInfo}
+                githubLink={githubLink}
+                deployedLink={deployedLink}
+            />
         </>
     );
 };

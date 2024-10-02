@@ -1,22 +1,86 @@
+.portfolio {
+    padding-bottom: 50px;
+}
+
 .cardsContainer {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.portfolio {
-    padding-bottom: 100px;
+    margin: 0 auto;
 }
 
 .card {
-    border: 1px solid #fff;
+    width: 22rem;
+}
+
+.card-body {
+    text-align: center;
 }
 
 .card-title {
     color: #717cdc;
 }
 
-.card-text {
-    font-size: 1.1rem !important;
+.card-body .btn {
+    border: 1px solid #717cdc;
+    background-color: transparent;
+    color: #717cdc;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.card-body .btn:hover,
+.card-body .btn:focus {
+    background-color: #717cdc;
+    border: 1px solid #717cdc;
+    color: #fff;
+}
+
+.modal-title {
+    display: flex;
+    align-items: center;
+}
+
+.modal-title:before {
+    display: inline-block;
+    content: '';
+    background-color: #717cdc;
+    height: 8px;
+    width: 15px;
+    margin-right: 8px;
+    transition: width 0.2s;
+}
+
+.modal-title:hover:before {
+    width: 25px;
+}
+
+/* BUTTONS MODAL */
+.btnModal {
+    border: 1px solid #717cdc;
+    background-color: transparent;
+    color: #717cdc;
+}
+
+.btnModal:hover,
+.btnModal:focus {
+    background-color: #717cdc;
+    color: #fff;
+}
+
+.btnModal:last-child {
+    margin-left: 10px;
+}
+
+.modal-footer .btn-primary {
+    border: 1px solid #717cdc;
+    color: #fff;
+    background-color: #717cdc;
+}
+
+.modal-footer .btn-primary:hover,
+.modal-footer .btn-primary:focus {
+    background-color: #fff;
+    color: #717cdc;
 }
